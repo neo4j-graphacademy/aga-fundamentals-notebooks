@@ -2,4 +2,5 @@ graphdatascience
 python-dotenv
 pandas
 ipykernel
+ipywidgets
 jupyterlab
