@@ -1,0 +1,40 @@
+{
+  "name": "Aura Graph Analytics Fundamentals",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start-jupyter.sh",
+  "postAttachCommand": "echo '' && echo 'Setup complete. Jupyter running on port 8888.' && echo '' && echo 'Next steps:' && echo '  1. Copy env.template to .env:  cp env.template .env' && echo '  2. Edit .env and fill in your Aura credentials' && echo '  3. Use GraphAcademy to run notebook cells, or open notebooks/1_connect.ipynb here' && echo ''",
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter Server",
+      "visibility": "private",
+      "onAutoForward": "ignore"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "jupyter.notebookFileRoot": "${workspaceFolder}",
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/.ipynb_checkpoints": true
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "upgradePackages": true
+    }
+  }
+}
