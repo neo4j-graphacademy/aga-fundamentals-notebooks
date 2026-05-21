@@ -36,6 +36,7 @@ nohup jupyter server \
     --ServerApp.allow_origin='*' \
     --ServerApp.allow_remote_access=True \
     --ServerApp.root_dir="${PWD}" \
+    --TerminalManager.shell_command="['/bin/bash']" \
     >> "$LOG" 2>&1 &
 
 # Quick readiness probe so the lifecycle hook returns a useful status.
