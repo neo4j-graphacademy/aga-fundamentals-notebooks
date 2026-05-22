@@ -4,3 +4,4 @@ pandas
 ipykernel
 ipywidgets
 jupyterlab
+neo4j-viz[gds]
