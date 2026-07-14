@@ -46,7 +46,7 @@ cp env.template .env
 jupyter lab notebooks/
 ```
 
-You'll need Python 3.11+.
+You'll need Python 3.14+.
 
 ## Course
 
